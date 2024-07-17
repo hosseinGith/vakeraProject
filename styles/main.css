@@ -64,8 +64,7 @@ html,
   /* 7 */
 }
 html {
-  background: url("../assets/images/main-bg.png") no-repeat;
-  background-size: cover;
+  background-image: url("../assets/images/main-bg.png");
 }
 
 /*
@@ -882,13 +881,6 @@ video {
   margin: auto;
 }
 
-@media (min-width: 640px) {
-  .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-height: 755px) {
   .mdHe\:w-\[350px\] {
     width: 350px;
@@ -911,5 +903,21 @@ video {
   }
   .mdHe\:h-screen {
     height: 100vh;
+  }
+  html {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+@media (min-width: 640px) {
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  html {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
