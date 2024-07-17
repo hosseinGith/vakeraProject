@@ -63,6 +63,9 @@ html,
   -webkit-tap-highlight-color: transparent;
   /* 7 */
 }
+html {
+  background-image: url("../assets/images/main-bg.png");
+}
 
 /*
 1. Remove the margin in all browsers.
@@ -864,10 +867,6 @@ video {
 }
 
 /* main page bg image */
-
-.bodyMainImage {
-  background-image: url("../assets/images/main-bg.png");
-}
 
 /* other styles */
 .containerStyles {
