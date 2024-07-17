@@ -64,7 +64,7 @@ html,
   /* 7 */
 }
 html {
-  background: url("../assets/images/main-bg.png") no-repeat fixed;
+  background: url("../assets/images/main-bg.png") no-repeat;
   background-size: cover;
 }
 
