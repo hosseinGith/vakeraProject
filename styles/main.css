@@ -909,4 +909,7 @@ video {
   .highHe\:justify-center {
     justify-content: center;
   }
+  .mdHe\:h-screen {
+    height: 100vh;
+  }
 }
