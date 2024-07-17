@@ -889,7 +889,7 @@ video {
   }
 }
 
-@media (min-height: 720px) {
+@media (min-height: 755px) {
   .mdHe\:w-\[350px\] {
     width: 350px;
   }
