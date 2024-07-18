@@ -74,7 +74,7 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
-  background: url("../assets/images/main-bg.png") no-repeat center 0;
+  background: url("../assets/images/main-bg.png") no-repeat center 0 fixed;
   background-size: cover;
 }
 
