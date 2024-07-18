@@ -921,7 +921,7 @@ video {
     background-size: cover;
   }
 }
-@media (min-height: 755px) and (min-width: 640px) {
+@media screen and (min-height: 755px) and (min-width: 640px) {
   .mainBgImg {
     background-size: cover;
   }
