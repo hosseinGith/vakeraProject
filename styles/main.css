@@ -883,9 +883,7 @@ video {
 
 .mainBgImg {
   background: url("../assets/images/main-bg.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-color: #09322c;
   background-size: cover;
 }
 @media (min-height: 755px) {
