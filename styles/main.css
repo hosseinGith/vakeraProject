@@ -873,7 +873,10 @@ video {
   padding: 0 15px;
 }
 .mainBoxContMAxWidth {
-  max-width: 350px;
+  max-width: 330px;
+}
+.mainBoxContMAxWidth img {
+  width: 100%;
 }
 .containerMaxWidth {
   max-width: 450px;
