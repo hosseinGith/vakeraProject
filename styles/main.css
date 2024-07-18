@@ -1,13 +1,7 @@
 /*
 ! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
-@font-face {
-  font-family: fontVazir;
-  src: url("../assets/fonts/vazir-font-v16.1.0/Vazir.eot") format("eot");
-  src: url("../assets/fonts/vazir-font-v16.1.0/Vazir.ttf") format("truetype");
-  src: url("../assets/fonts/vazir-font-v16.1.0/Vazir.woff") format("woff");
-  src: url("../assets/fonts/vazir-font-v16.1.0/Vazir.woff2") format("woff2");
-}
+
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -24,7 +18,6 @@
   /* 2 */
   border-color: currentColor;
   /* 2 */
-  font-family: fontVazir;
 }
 
 ::before,
@@ -616,6 +609,19 @@ video {
   left: 20px;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -628,24 +634,36 @@ video {
   display: grid;
 }
 
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[200px\] {
-  height: 200px;
+.h-\[250px\] {
+  height: 250px;
 }
 
 .h-screen {
   height: 100vh;
 }
 
+.min-h-\[200px\] {
+  min-height: 200px;
+}
+
 .w-\[100px\] {
   width: 100px;
 }
 
+.w-\[130px\] {
+  width: 130px;
+}
+
 .w-\[250px\] {
   width: 250px;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-\[80px\] {
+  width: 80px;
 }
 
 .w-full {
@@ -656,8 +674,20 @@ video {
   width: 100vw;
 }
 
+.max-w-\[190px\] {
+  max-width: 190px;
+}
+
 .max-w-\[300px\] {
   max-width: 300px;
+}
+
+.max-w-\[350px\] {
+  max-width: 350px;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .basis-\[10\%\] {
@@ -706,24 +736,6 @@ video {
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-\[10px\] > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(10px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(10px * var(--tw-space-y-reverse));
-}
-
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
-}
-
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-}
-
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -734,6 +746,18 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[10px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(10px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(10px * var(--tw-space-y-reverse));
 }
 
 .overflow-y-auto {
@@ -759,6 +783,11 @@ video {
 .border-mainYellow {
   --tw-border-opacity: 1;
   border-color: rgb(244 191 104 / var(--tw-border-opacity));
+}
+
+.bg-SNStyle {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 88 0 / var(--tw-bg-opacity));
 }
 
 .bg-mainPageMessage {
@@ -822,14 +851,22 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-\[2px\] {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 .py-\[3px\] {
   padding-top: 3px;
   padding-bottom: 3px;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .text-center {
@@ -842,6 +879,14 @@ video {
 
 .text-\[13px\] {
   font-size: 13px;
+}
+
+.text-\[14\.5px\] {
+  font-size: 14.5px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .tracking-\[\.4rem\] {
@@ -863,9 +908,10 @@ video {
   color: rgb(214 25 90 / var(--tw-text-opacity));
 }
 
-/* main page bg image */
-
-/* other styles */
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
 .containerStyles {
   padding: 0 15px;
 }
@@ -885,43 +931,57 @@ video {
   background: url("../assets/images/main-bg.jpg") no-repeat center;
   background-color: #09322c;
 }
-@media (min-height: 755px) {
+.titlePageTextSize {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (min-width: 640px) {
+  .sm\:text-\[15px\] {
+    font-size: 15px;
+  }
+
+  .sm\:text-\[18px\] {
+    font-size: 18px;
+  }
+  .mainBgImg {
+    background-size: cover;
+  }
+}
+
+@media (min-height: 760px) {
+  .mdHe\:flex {
+    display: flex;
+  }
+
+  .mdHe\:h-screen {
+    height: 100vh;
+  }
+
   .mdHe\:w-\[350px\] {
     width: 350px;
+  }
+
+  .mdHe\:items-center {
+    align-items: center;
+  }
+
+  .mdHe\:justify-center {
+    justify-content: center;
   }
 
   .mdHe\:overflow-y-hidden {
     overflow-y: hidden;
   }
+  .mainBgImg:not(.heightOver) {
+    background-size: cover;
+  }
+}
 
-  .highHe\:flex {
+@media (min-height: 880px) {
+  .highHeight\:flex {
     display: flex;
   }
-
-  .highHe\:items-center {
-    align-items: center;
-  }
-
-  .highHe\:justify-center {
-    justify-content: center;
-  }
-  .mdHe\:h-screen {
-    height: 100vh;
-  }
-  .mainBgImg {
-    background-size: cover;
-  }
-}
-@media (min-width: 640px) {
-  .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  .mainBgImg {
-    background-size: cover;
-  }
-}
-@media screen and (min-height: 755px) and (min-width: 640px) {
   .mainBgImg {
     background-size: cover;
   }
