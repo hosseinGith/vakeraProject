@@ -882,9 +882,8 @@ video {
 }
 
 .mainBgImg {
-  background: url("../assets/images/main-bg.jpg") no-repeat center center fixed;
+  background: url("../assets/images/main-bg.jpg") no-repeat center;
   background-color: #09322c;
-  background-size: cover;
 }
 @media (min-height: 755px) {
   .mdHe\:w-\[350px\] {
@@ -909,10 +908,21 @@ video {
   .mdHe\:h-screen {
     height: 100vh;
   }
+  .mainBgImg {
+    background-size: cover;
+  }
 }
 @media (min-width: 640px) {
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+  .mainBgImg {
+    background-size: cover;
+  }
+}
+@media (min-height: 755px) and (min-width: 640px) {
+  .mainBgImg {
+    background-size: cover;
   }
 }
