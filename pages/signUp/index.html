@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../output.css" />
+    <link rel="stylesheet" href="../../other.styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>دسته بندی محصولات</title>
+  </head>
+  <body
+    class="mainBgImg mdHe:flex justify-center items-center overflow-x-hidden overflow-y-auto h-screen w-screen bg-fixed bg-cover bg-no-repeat"
+  >
+    <div
+      id="container"
+      class="containerMaxWidth space-y-[10px] text-fontColors"
+    >
+      <header>
+        <section>
+          <div class="containerStyles flex justify-center">
+            <div class="mainBoxContMAxWidth">
+              <a href=""
+                ><img
+                  class=""
+                  src="../../../assets/images/logo.png"
+                  alt="vakera Logo / لوگوی واکرا"
+              /></a>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main class="space-y-4">
+        <section>
+          <div class="containerStyles">
+            <form
+              class="bg-loginForm min-h-[220px] gap-5 justify-around flex flex-col items-center px-3 py-4"
+              id="pageContent"
+            >
+              <h1 class="text-[25px] font-bold">ثبت نام</h1>
+              <div
+                id="userNumber"
+                class="text-fontColors group bg-lowBlack rounded-md overflow-hidden flex"
+              >
+                <input
+                  type="text"
+                  class="outline-none butt w-full py-1 px-2 rounded-r-md text-mainPageMessage"
+                  name="number"
+                  id="number"
+                  placeholder="شمار موبایل"
+                />
+                <button
+                  type="button"
+                  class="px-3 group-hover:text-fontColors transition-all duration-300 text-[gray]"
+                >
+                  <i class="fa fa-user"></i>
+                </button>
+              </div>
+              <button
+                class="px-5 py-2 rounded-md bg-btnLogin hover:opacity-50 transition-opacity duration-300"
+              >
+                ثبت نام
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
