@@ -1164,6 +1164,10 @@ video {
   font-weight: bold;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 span.info {
   background-color: #0dcaf0;
 }
