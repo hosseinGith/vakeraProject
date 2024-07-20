@@ -57,19 +57,24 @@
                 <div class="text-[14.5px] sm:text-[18px]">
                   <p>عکس نصب جک با شماره سریال فوق را آپلود کنید</p>
                   <div class="flex justify-center">
-                    <img
-                      src="../../assets/images/1.13.png"
-                      class="w-[100px]"
-                      alt="xxx"
-                    />
+                    <label for="uploadImage">
+                      <img
+                        src="../../assets/images/1.13.png"
+                        class="w-[100px]"
+                        alt="xxx"
+                      />
+                      <input
+                        type="file"
+                        accept="image/*"
+                        name="uploadImage"
+                        id="uploadImage"
+                        class="hidden"
+                      />
+                    </label>
                   </div>
                 </div>
                 <div class="max-w-[350px]">
-                  <img
-                    src="../../assets/images/1.11.png"
-                    class="max-w-full"
-                    alt="xxx"
-                  />
+                  <img class="max-w-full" id="imageSelected" />
                 </div>
               </form>
             </div>
@@ -80,11 +85,7 @@
         <section>
           <div class="containerStyles flex justify-center p-3">
             <a href="#" class="text-center">
-              <img
-                class="w-[100px]"
-                src="../../assets/images/1.15.png"
-                alt="xxx"
-              />
+              <img class="w-[100px]" src="../../assets/images/1.15.png" />
               بازگشت
             </a>
           </div>
@@ -109,5 +110,17 @@
       </footer>
     </div>
     <script src="../../scripts/productsArchive 2.js"></script>
+    <script>
+      const uploadImage = document.querySelector("#uploadImage");
+      const imageSelected = document.querySelector("#imageSelected");
+
+      uploadImage.addEventListener("change", () => {
+        let src, alt;
+        alt = uploadImage.files[0].name;
+        src = URL.createObjectURL(uploadImage.files[0]);
+        imageSelected.alt = alt;
+        imageSelected.src = src;
+      });
+    </script>
   </body>
 </html>
