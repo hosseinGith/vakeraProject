@@ -3,16 +3,21 @@
 */
 @font-face {
   font-family: fontVazir;
-  src: url("../assets/fonts/vazir-font-v16.1.0/Vazir.eot") format("eot");
-  src: url("../assets/fonts/vazir-font-v16.1.0/Vazir.ttf") format("truetype");
-  src: url("../assets/fonts/vazir-font-v16.1.0/Vazir.woff") format("woff");
-  src: url("../assets/fonts/vazir-font-v16.1.0/Vazir.woff2") format("woff2");
+  src: url("../assets/fonts/VAZIR\ REGULAR.TTF") format("truetype"),
+    url("../assets/fonts/VAZIR\ BOLD.TTF") format("truetype");
 }
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
+* {
+  font-family: fontVazir;
+}
+
+button {
+  font-family: fontVazir;
+}
 
 *,
 ::before,
@@ -53,7 +58,7 @@ html,
   -o-tab-size: 4;
   tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  font-family: fontVazir, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
@@ -143,7 +148,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+  font-family: fontVazir, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
@@ -1108,6 +1113,11 @@ video {
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(214 25 90 / var(--tw-text-opacity));
+}
+
+.text-lowBlue {
+  --tw-text-opacity: 1;
+  color: rgb(207 244 252 / var(--tw-text-opacity));
 }
 
 .outline-none {
