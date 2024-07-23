@@ -1124,6 +1124,11 @@ video {
   color: rgb(207 244 252 / var(--tw-text-opacity));
 }
 
+.text-mainYellow {
+  --tw-text-opacity: 1;
+  color: rgb(244 191 104 / var(--tw-text-opacity));
+}
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
