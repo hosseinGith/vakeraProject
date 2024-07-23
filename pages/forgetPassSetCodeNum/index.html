@@ -64,9 +64,37 @@
                 بازنشانی
               </button>
             </form>
+            <p class="py-4 text-center w-full">
+              <a id="timer"></a>
+            </p>
           </div>
         </section>
       </main>
     </div>
+    <script>
+      const timerLink = document.querySelector("#timer");
+
+      let sec = 120;
+      let interval = null;
+
+      // set link
+      let link = "";
+      //text link after sec
+      let linkText = "دریافت کد";
+
+      function timer() {
+        if (sec <= 0) {
+          timerLink.href = link;
+          timerLink.textContent = linkText;
+          timerLink.className += " font-bold text-[18px]";
+          clearInterval(interval);
+          return;
+        }
+        timerLink.textContent = "دریافت کد بعد از: " + Math.round(sec);
+        sec--;
+      }
+      interval = setInterval(() => timer(), 1000);
+      timer();
+    </script>
   </body>
 </html>
