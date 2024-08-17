@@ -163,10 +163,11 @@
                   </p>
                   <p class="flex flex-col">
                     <span>کد پستی :</span>
-                    <input
+                    <select
                       type="text"
                       class="border-2 border-[gray] rounded-md px-2 outline-none"
-                    />
+                      id="citys"
+                    ></select>
                   </p>
                   <p class="flex flex-col">
                     <span> تلفن ثابت :</span>
@@ -216,5 +217,18 @@
       });
     </script>
     <script src="../../scripts/main.js"></script>
+    <script>
+      async function setCitys() {
+        try {
+          const res = await (await fetch("yazd.json")).json();
+          res.forEach((city) => {
+            document.querySelector(
+              "#citys"
+            ).innerHTML += `<option value="${city.cityName}">${city.cityName}</option>`;
+          });
+        } catch (e) {}
+      }
+      setCitys();
+    </script>
   </body>
 </html>
