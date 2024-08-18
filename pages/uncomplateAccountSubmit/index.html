@@ -78,6 +78,7 @@
                       <input
                         type="text"
                         class="border-2 w-[50px] border-[gray] rounded-md px-2 outline-none"
+                        id="telPrefix"
                         value="021-"
                         dir="ltr"
                       />
@@ -149,24 +150,24 @@
                 <div class="space-y-2">
                   <p class="flex flex-col">
                     <span> استان :</span>
-                    <input
-                      type="text"
+
+                    <select
+                      id="provinceIdSelect"
                       class="border-2 border-[gray] rounded-md px-2 outline-none"
-                    />
+                    ></select>
                   </p>
                   <p class="flex flex-col">
                     <span>شهر :</span>
-                    <input
-                      type="text"
+                    <select
+                      id="citySelect"
                       class="border-2 border-[gray] rounded-md px-2 outline-none"
-                    />
+                    ></select>
                   </p>
                   <p class="flex flex-col">
                     <span>کد پستی :</span>
                     <select
                       type="text"
                       class="border-2 border-[gray] rounded-md px-2 outline-none"
-                      id="citys"
                     ></select>
                   </p>
                   <p class="flex flex-col">
@@ -218,17 +219,41 @@
     </script>
     <script src="../../scripts/main.js"></script>
     <script>
-      async function setCitys() {
+      const provinceIdSelect = document.querySelector("#provinceIdSelect");
+      const citySelect = document.querySelector("#citySelect");
+      const telPrefix = document.querySelector("#telPrefix");
+
+      let provinces = [];
+      let allCity = [];
+      async function setData() {
         try {
-          const res = await (await fetch("yazd.json")).json();
-          res.forEach((city) => {
-            document.querySelector(
-              "#citys"
-            ).innerHTML += `<option value="${city.cityName}">${city.cityName}</option>`;
+          const res = await (await fetch("province.json")).json();
+          provinces = res;
+          provinceIdSelect.innerHTML = "";
+          res.forEach((province, index) => {
+            provinceIdSelect.innerHTML += `<option provinceId="${province.id}" value="${province.name}">${province.name}</option>`;
           });
+          const city = await (await fetch("city.json")).json();
+          allCity = city;
+          checkProvinceId();
         } catch (e) {}
       }
-      setCitys();
+      function checkProvinceId() {
+        let provinceId = "";
+        Array.from(provinceIdSelect.children).forEach((item) => {
+          if (item.value === provinceIdSelect.value)
+            provinceId = item.getAttribute("provinceId");
+        });
+        telPrefix.value = "-" + provinces[provinceId - 1].tel_prefix;
+        citySelect.innerHTML = "";
+        allCity.forEach((city) => {
+          if (city.province_id == provinceId) {
+            citySelect.innerHTML += `<option value="${city.name}">${city.name}</option>`;
+          }
+        });
+      }
+      setData();
+      provinceIdSelect.addEventListener("change", checkProvinceId);
     </script>
   </body>
 </html>
